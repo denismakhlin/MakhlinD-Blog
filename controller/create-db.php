@@ -16,8 +16,19 @@ $connection = new mysqli($host, $username, $password);
     $exists = $connection->select_db($database);
 //Below is the code I use to test if the $exists database is working
     if(!$exists) {
-        echo "Database Exists";
-    }
+//Below is the code that created my database using its connection
+        $query = $connection->query("CREATE DATABASE $database");
+//Below is the code that says if my ddatabase was created the  it will echo/say
+//Successfully created database
+        if($query) {
+            echo "Successfully created database: " . $database;
+        }
+//Below is the code using an else statement to say that it will echo out  
+//Database already exists
+     
+    }else {
+            echo "Database already exists";
+        }
     
 //Below is the code that closes my connection after it is successful 
     $connection->close();
