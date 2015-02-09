@@ -51,3 +51,7 @@ $connection = new mysqli($host, $username, $password);
     
 //Below is the code that closes my connection after it is successful 
     $connection->close();
+    
+//    hi
+//    hi
+//    hi
