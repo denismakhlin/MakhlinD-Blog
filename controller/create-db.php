@@ -2,7 +2,7 @@
 //Below is the code that lets me include info from my database into my creat-db
 //The __DIR__ . line of code is saying starting from this location we will move 
 //on
-require_once(__DIR__ ."/../model/database.php");
+require_once(__DIR__ ."/../model/config.php");
 //Below is the code that allows me to accses my mysqli server and the code in my 
 //datababse to be stored in the connection object
 $connection = new mysqli($host, $username, $password);
@@ -52,6 +52,3 @@ $connection = new mysqli($host, $username, $password);
 //Below is the code that closes my connection after it is successful 
     $connection->close();
     
-//    hi
-//    hi
-//    hi
